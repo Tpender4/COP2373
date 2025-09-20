@@ -23,11 +23,12 @@ def score_counter(text, words):
 # Function for determining the likelihood something is spam and then seeing if the score is
 # under or equal to a certain amount
 def spam_likelihood(score):
-    if score <= 2: return "Low odds of spam"
-    if score <= 6: return "Medium odds of spam"
-    if score <= 12: return "High odds of spam"
-    return "Very High odds of spam"
+    if score <= 3: return "Low chance this is spam"
+    if score <= 6: return "Medium chance this is spam"
+    if score <= 12: return "High chance this is spam"
+    return "Very High chance this is spam"
 
+# Main function to get input and print results
 def main():
     # User input for email message to check for spam
     msg = input("Enter your email message: ")
