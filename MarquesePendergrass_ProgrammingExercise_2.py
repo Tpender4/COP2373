@@ -27,3 +27,15 @@ def spam_likelihood(score):
     if score <= 6: return "Medium odds of spam"
     if score <= 12: return "High odds of spam"
     return "Very High odds of spam"
+
+def main():
+    # User input for email message to check for spam
+    msg = input("Enter your email message: ")
+    # Gets score and spam words found
+    score, found = score_counter(msg, SPAM_KEYWORDS)
+    print("Score:", score)
+    print("Likelihood:", spam_likelihood(score))
+    print("Spam words found:", found if found else "No spam words found")
+
+if __name__ == "__main__":
+    main()
