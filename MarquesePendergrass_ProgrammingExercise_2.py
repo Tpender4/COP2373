@@ -1,3 +1,5 @@
+# Description: Program that checks an email message and whether it is likely to be spam based on
+# a list of common spam words and then gives an appropriate score.
 
 # creates list of 30 common spam words to check in a given email
 SPAM_KEYWORDS = [
