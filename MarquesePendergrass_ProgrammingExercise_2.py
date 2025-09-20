@@ -19,3 +19,11 @@ def score_counter(text, words):
             found[w] = c
             score += c
     return score, found
+
+# Function for determining the likelihood something is spam and then seeing if the score is
+# under or equal to a certain amount
+def spam_likelihood(score):
+    if score <= 2: return "Low odds of spam"
+    if score <= 6: return "Medium odds of spam"
+    if score <= 12: return "High odds of spam"
+    return "Very High odds of spam"
