@@ -10,3 +10,9 @@ def main():
 
     # Prompts user to enter the number of expenses they have
     expenses_number = int(input("Enter the number of expenses you have: "))
+
+    # loop for collecting the expenses
+    for i in range(expenses_number):
+        expense_name = input("Enter expense name: ")
+        amount = float(input(f"Enter amount for {expense_name}: "))
+        expenses.append([expense_name, amount])
