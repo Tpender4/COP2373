@@ -16,3 +16,20 @@ def main():
         expense_name = input("Enter expense name: ")
         amount = float(input(f"Enter amount for {expense_name}: "))
         expenses.append([expense_name, amount])
+
+    # gets the total amount of expenses using lamba function with reduce and takes a running total of x any y with
+    # y[1] for expenses starting at 0
+    total = reduce(lambda x, y: x + y[1], expenses, 0)
+
+    # assigns highest and lowest variables to the max expenses within the lamba key and associates it with the proper
+    # index within the highest or lowest values
+    highest = max(expenses, key=lambda x: x[1])
+    lowest = min(expenses, key=lambda x: x[1])
+
+    # prints the total amount of expenses, highest expense, and lowest expense
+    print("Total expenses: ", total)
+    print("Highest expenses: ", highest[0], 'at', highest[1])
+    print("Lowest expenses: ", lowest[0], 'at', lowest[1])
+
+if __name__ == "__main__":
+    main()
